@@ -1,0 +1,31 @@
+<%- include('partials/header') -%>
+<div class="card mt-4 mx-auto " style="max-width: 400px;">
+    <div class="row no-gutters">
+      <div class="col-md-12">
+        <div class="card-body text-center">
+          <h2 class="card-title text-warning ">AskQuery</h2>
+          <p class="card-text"><small class="text-muted"><b>A Social Platform to Ask and Debug Coding Doubts</b></small></p>
+            <%- include('partials/messages') -%>
+    <form action="/signup" method="POST">
+
+        <div class="form-group px-0">
+            <input type="text" name="name" class="form-control" placeholder="Name">
+        </div>
+
+        <div class="form-group px-0">
+            <input type="email" name="email" class="form-control" placeholder="Email Address">
+        </div>
+
+        <div class="form-group px-0">
+            <input type="password" name="password" class="form-control" placeholder="Password">
+        </div>
+
+        <button type="submit" class="btn btn-danger btn-block">Register</button>
+    </form>
+    <a href="/login">Already have an Account? <u> Signin here</u></a>
+</div>
+</div>
+</div>
+</div>
+
+<%- include('partials/footer') -%>

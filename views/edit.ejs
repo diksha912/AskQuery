@@ -1,0 +1,21 @@
+<%- include('partials/header') -%>   
+<section class="mt-5">
+<div class="card mx-auto " style="width: 60%; box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);">
+  <div class="card-body">
+    <h5 class="card-title text-center">Update Post</h5>
+   <form action="/edit/<%= post.id%>?_method=PUT" method="POST">
+    <input type="hidden" name="_method" Value="PUT">
+   <div class="form-group">
+    <label for="post-title">Post Title</label>
+    <input type="text" name="title"  class="form-control" id="post-title" value="<%=post.title%>" style=" border-radius:0;border-style:none;border-bottom:2px solid blue">
+   </div>
+   <div class="form-group">
+    <label for="post">Post</label>
+    <textarea type="text" name="postBody" value= "<%=post.postBody%>" class="form-control " id="post" style=" border-radius:0;border-style:none;border-bottom:2px solid blue"></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Edit Post</button>
+</form>
+  </div>
+</div>
+</section>
+<%- include('partials/footer') -%>

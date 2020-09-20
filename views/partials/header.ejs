@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Authentication Project</title>
+
+    <link rel="stylesheet" type="text/css" href="../libs/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/public/style.css">
+</head>
+
+    <body style="background-color:gainsboro;">
+    <nav class="py-1 navbar navbar-expand-lg navbar-light bg-danger">
+        <a class="navbar-brand text-white ml-4" href="/home"><b>QueryHome</b></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+
+            <div class="mr-5">
+                <ul class="navbar-nav mr-auto mr-0">
+                    <% if(currentUser) { %>
+                     
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="/home">Home</a>
+                        </li>
+                     <li class="nav-item">
+                    <i class="fa fa-user" style="font-size: 26px; padding-left:10px;padding-top:5px;"></i> 
+                     </li>
+                    <li class="nav-item">
+                    <a class="nav-link text-white" href="/profile"><%=currentUser.name%></b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="/password/change">Change Password</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="/addpost">Ask Query</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="/logout">Logout</a>
+                    </li>
+
+                    <% } %>
+
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
